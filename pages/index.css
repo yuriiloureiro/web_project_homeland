@@ -1,5 +1,5 @@
-@import "../vendor/fonts.css";
 @import "../vendor/normalize.css";
+@import "../vendor/fonts.css";
 @import "../blocks/header.css";
 @import "../blocks/lead.css";
 @import "../blocks/intro.css";
