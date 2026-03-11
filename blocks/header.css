@@ -10,27 +10,29 @@
   width: 254px;
   height: 70px;
   object-fit: contain;
+  display: block;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
   .header {
     padding-top: 30px;
-    padding-bottom: 2 0px;
+    padding-bottom: 56px;
   }
+
   .header__logo {
     width: 254px;
     height: 66px;
   }
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 544px) {
   .header {
     padding-top: 20px;
     padding-bottom: 24px;
   }
+
   .header__logo {
     width: 188px;
     height: 52px;
-    object-fit: contain;
   }
 }

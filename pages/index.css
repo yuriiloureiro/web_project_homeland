@@ -1,36 +1,7 @@
 @import "../vendor/normalize.css";
 @import "../vendor/fonts.css";
+@import "./global.css";
 @import "../blocks/header.css";
 @import "../blocks/lead.css";
 @import "../blocks/intro.css";
 @import "../blocks/footer.css";
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  background-color: #2a2c2f;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.page {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
