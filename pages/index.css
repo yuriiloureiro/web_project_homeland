@@ -1,0 +1,28 @@
+@import "../vendor/fonts.css";
+@import "../vendor/normalize.css";
+@import "../blocks/header.css";
+@import "../blocks/lead.css";
+@import "../blocks/intro.css";
+@import "../blocks/footer.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #2a2c2f;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}

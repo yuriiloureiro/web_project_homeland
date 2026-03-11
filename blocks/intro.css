@@ -1,0 +1,113 @@
+.intro {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 92px 0 92px 148px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.intro__title {
+  font-family: "Inter", sans-serif;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 58px;
+  color: #ffffff;
+  max-width: 830px;
+  margin-bottom: 0 0 40px 0;
+}
+
+.intro__text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #ffffff;
+  max-width: 738px;
+  margin-bottom: 10px;
+  margin-top: 32px;
+}
+
+.intro__quote {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  color: #ffffff;
+  width: 100%;
+  max-width: 738px;
+  text-align: right;
+  margin-bottom: 32px;
+  margin-top: 10px;
+}
+
+.intro__description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 163%;
+  color: #ffffff;
+  max-width: 722px;
+}
+
+@media screen and (max-width: 1023px) {
+  .intro {
+    padding: 92px 24px;
+    max-width: 100%;
+  }
+  .intro__title {
+    font-size: 45px;
+    line-height: 49px;
+    max-width: 100%;
+  }
+  .intro__text,
+  .intro__quote,
+  .intro__description {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .intro {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .intro__title {
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 900;
+    max-width: 288px;
+    margin: 0 0 16px;
+    text-align: left;
+  }
+  .intro__text {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    max-width: 288px;
+    margin: 0 0 12px;
+  }
+  .intro__quote {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+    max-width: 288px;
+    width: 100%;
+    text-align: right;
+    margin: 8px 0 24px;
+  }
+  .intro__description {
+    font-size: 16px;
+    line-height: 1.63;
+    font-weight: 400;
+    max-width: 288px;
+    margin: 0;
+    text-align: left;
+  }
+}
