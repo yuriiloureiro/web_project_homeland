@@ -39,8 +39,7 @@
   width: 100%;
   max-width: 738px;
   text-align: right;
-  margin-top: 10px;
-  margin-bottom: 32px;
+  margin: 10px 0 32px 0;
 }
 
 .intro__description {
