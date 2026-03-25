@@ -1,0 +1,283 @@
+/* Container geral */
+.places {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-bottom: 72px;
+  box-sizing: border-box;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+/* Cada card usa GRID para controle preciso das áreas */
+.places__card {
+  width: 984px;
+  margin-left: 148px;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  grid-template-rows: auto 460px auto;
+  column-gap: 48px;
+  row-gap: 25px;
+  align-items: start;
+  box-sizing: border-box;
+  min-height: 832px;
+}
+
+/* Title */
+.places__title {
+  grid-column: 1;
+  grid-row: 1;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 76px;
+  margin: 0;
+}
+
+/* Meta (ARTISTAS + subtitle) */
+.places__meta {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  justify-self: start;
+}
+
+/* Label e subtitle dentro da meta */
+.places__label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 12%;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  margin: 0 0 8px 0;
+}
+
+.places__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Imagem */
+.places__image {
+  grid-column: 1;
+  grid-row: 2;
+  width: 460px;
+  height: 460px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* Body (parágrafos) */
+.places__body {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.places__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 163%;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Botão */
+.places__button {
+  grid-column: 1;
+  grid-row: 3;
+  justify-self: start;
+  margin-top: 48px;
+  padding: 13px 20px;
+  background: linear-gradient(90deg, #0278fe 0%, #003a7b 100%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  text-decoration: none;
+  text-align: center;
+  width: fit-content;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Hover do botão */
+.places__button:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #002a4a 100%);
+  box-shadow: 7px 7px 14px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1023px) {
+  .places {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 72px 24px;
+    gap: 72px;
+  }
+
+  .places__card {
+    width: 100%;
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 28px;
+    row-gap: 0;
+    align-items: start;
+    min-height: auto;
+  }
+
+  .places__title {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 42px;
+    line-height: 46px;
+    margin: 0 0 24px 0;
+  }
+
+  .places__meta {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    margin-bottom: 20px;
+  }
+
+  .places__image {
+    grid-column: 1;
+    grid-row: 2;
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .places__button {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+    margin-top: 364px;
+    justify-self: start;
+    padding: 13px 20px;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .places__body {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .places__description {
+    font-size: 16px;
+    line-height: 1.63;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .places {
+    padding-left: 16px;
+    padding-right: 16px;
+    gap: 60px;
+  }
+
+  .places__card {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+    gap: 0;
+  }
+
+  /* Título */
+  .places__title {
+    font-size: 32px;
+    line-height: 35px;
+    margin-bottom: 30px;
+  }
+
+  /* Meta */
+  .places__meta {
+    margin-bottom: 30px;
+  }
+
+  /* Imagem */
+  .places__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .places__body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 544px) {
+    .places__body {
+      display: block;
+      margin-top: 0;
+    }
+
+    /* Espaçamento Imagem */
+    .places__image {
+      margin-bottom: 30px;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Espaçamento */
+    .places__description + .places__description {
+      margin-top: 30px;
+      display: block;
+    }
+
+    .places__description {
+      font-size: 16px;
+      line-height: 1.63;
+      margin-bottom: 0;
+    }
+
+    /* Botão */
+    .places__button {
+      margin-top: 30px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  .places__description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .places__button {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+  }
+}
