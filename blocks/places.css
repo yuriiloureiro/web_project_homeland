@@ -26,7 +26,8 @@
   min-height: 832px;
 }
 
-/* Title */
+/* Título */
+/* usamos .break-line para controlar quebras visuais sem <br /> no HTML */
 .places__title {
   grid-column: 1;
   grid-row: 1;
@@ -34,6 +35,12 @@
   font-size: 72px;
   line-height: 76px;
   margin: 0;
+  white-space: normal;
+}
+
+/* utilitário para forçar quebra onde antes havia <br> */
+.break-line {
+  display: block;
 }
 
 /* Meta (ARTISTAS + subtitle) */
@@ -63,7 +70,7 @@
   margin: 0;
 }
 
-/* Imagem */
+/* Imagem (tamanho controlado por CSS) */
 .places__image {
   grid-column: 1;
   grid-row: 2;
@@ -72,6 +79,8 @@
   object-fit: cover;
   display: block;
   border-radius: 0;
+  /* Sombra para imagens maiores conforme roteiro */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 /* Body (parágrafos) */
@@ -91,7 +100,7 @@
   margin: 0;
 }
 
-/* Botão */
+/* Botão com linear-gradient e box-shadow (conforme roteiro) */
 .places__button {
   grid-column: 1;
   grid-row: 3;
@@ -110,13 +119,15 @@
   width: fit-content;
   transition:
     background 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    transform 0.18s ease;
 }
 
 /* Hover do botão */
 .places__button:hover {
   background: linear-gradient(90deg, #0056b3 0%, #002a4a 100%);
   box-shadow: 7px 7px 14px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
 }
 
 /* Responsividade */
@@ -163,13 +174,14 @@
     object-fit: cover;
     display: block;
     margin-bottom: 24px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32);
   }
 
   .places__button {
     grid-column: 1;
     grid-row: 2;
     align-self: end;
-    margin-top: 364px;
+    margin-top: 0;
     justify-self: start;
     padding: 13px 20px;
     width: fit-content;
@@ -209,23 +221,21 @@
     gap: 0;
   }
 
-  /* Título */
   .places__title {
     font-size: 32px;
     line-height: 35px;
     margin-bottom: 30px;
   }
 
-  /* Meta */
   .places__meta {
     margin-bottom: 30px;
   }
 
-  /* Imagem */
   .places__image {
     width: 100%;
     height: auto;
     margin-bottom: 30px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.32);
   }
 
   .places__body {
@@ -234,50 +244,24 @@
     gap: 30px;
   }
 
-  @media screen and (max-width: 544px) {
-    .places__body {
-      display: block;
-      margin-top: 0;
-    }
-
-    /* Espaçamento Imagem */
-    .places__image {
-      margin-bottom: 30px;
-      width: 100%;
-      height: auto;
-    }
-
-    /* Espaçamento */
-    .places__description + .places__description {
-      margin-top: 30px;
-      display: block;
-    }
-
-    .places__description {
-      font-size: 16px;
-      line-height: 1.63;
-      margin-bottom: 0;
-    }
-
-    /* Botão */
-    .places__button {
-      margin-top: 30px;
-      display: block;
-      width: 100%;
-      text-align: center;
-      font-size: 14px;
-      font-weight: 400;
-    }
+  /* Espaçamento entre paragrafos em mobile */
+  .places__description + .places__description {
+    margin-top: 30px;
+    display: block;
   }
 
   .places__description {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.63;
+    margin-bottom: 0;
   }
 
   .places__button {
     margin-top: 30px;
+    display: block;
     width: 100%;
     text-align: center;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
