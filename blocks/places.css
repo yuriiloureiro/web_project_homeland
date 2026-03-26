@@ -38,8 +38,7 @@
   white-space: normal;
 }
 
-/* utilitário para forçar quebra onde antes havia <br> */
-.break-line {
+.places__break-line {
   display: block;
 }
 
@@ -79,7 +78,6 @@
   object-fit: cover;
   display: block;
   border-radius: 0;
-  /* Sombra para imagens maiores conforme roteiro */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
@@ -100,7 +98,7 @@
   margin: 0;
 }
 
-/* Botão com linear-gradient e box-shadow (conforme roteiro) */
+/* Botão com linear-gradient e box-shadow */
 .places__button {
   grid-column: 1;
   grid-row: 3;
@@ -244,7 +242,6 @@
     gap: 30px;
   }
 
-  /* Espaçamento entre paragrafos em mobile */
   .places__description + .places__description {
     margin-top: 30px;
     display: block;

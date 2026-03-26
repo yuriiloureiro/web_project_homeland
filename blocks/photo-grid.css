@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Grid container with fixed desktop cell sizes */
+/* Grid container */
 .photo-grid__grid {
   display: grid;
   grid-template-columns: repeat(4, 284px);
@@ -48,7 +48,6 @@
 @media screen and (max-width: 1024px) {
   .photo-grid__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    /* Preserva proporção 213/284 para as linhas dividindo pela largura disponível e colunas */
     grid-auto-rows: calc((213 / 284) * (100vw - 48px) / 2);
     width: 100%;
     max-width: 768px;
